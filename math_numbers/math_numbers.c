@@ -4,7 +4,7 @@ The factorial 0=>1,1=>1,2=>2,3=>6,4=>24,5=>120
 @__date 20th March, 2015 17:56:32
 */
 #include <stdio.h>
-#include "headers/math_header.h"
+#include "../headers/math_header.h"
 
 int main()
 {

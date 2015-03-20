@@ -8,8 +8,7 @@ The factorial 0=>1,1=>1,2=>2,3=>6,4=>24,5=>120
 
 int main()
 {
-	int i = 15, fact, square, fibo;
-	char *choice;
+	int i = 20, fact, square, fibo, prime;
 
 	printf("\nVALUES BY REFERENCE\n");
 
@@ -18,12 +17,16 @@ int main()
 	printf("%d! -> %d\n",i, fact);
 
 	/*square*/
-	square = * get_square_ref(&i);
+	square = *get_square_ref(&i);
 	printf("%d squared -> %d\n", i, square);
 
 	/*fibonacci*/
 	fibo = *fibonacci(&i);
 	printf("Fibonacci %d -> %d\n", i, fibo);
+
+	/*next prime number*/
+	prime = *next_prime(&i);
+	printf("Next prime from %d -> %d\n", i, prime);
 
 	printf("\n\n");
 	

@@ -6,3 +6,4 @@ Implementation of **Pointers** in C using various problems. Pass and return by r
   * [Square problem(Both reference and by value)](http://en.wikipedia.org/wiki/Square_number)
   * [Fibonacci sequence](http://en.wikipedia.org/wiki/Fibonacci_number)
   * [Factorial](http://en.wikipedia.org/wiki/Factorial)
+  * [Next Prime](http://en.wikipedia.org/wiki/Prime)

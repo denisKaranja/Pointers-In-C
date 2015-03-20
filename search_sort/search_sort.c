@@ -6,10 +6,10 @@ Search and sort algorithms
 #include <stdio.h>
 #include "../headers/search_sort_header.h"
 
-void main()
+int main()
 {
-	int numbers[] = {20, 10, 15, -4, 5, 22, 34, 65, -3, 34};
-	int i, max_value;
+	int numbers[] = {20, 10, 15, -2, 5, 22, 34, 65, -3, 34};
+	int i, max_value, min_value;
 	int array_length;
 
 	array_length = sizeof(numbers) / sizeof(numbers[0]);
@@ -26,5 +26,9 @@ void main()
 	printf("Maximum value above is %d \n", max_value);
 
 	/*minimum value*/
+	min_value = *min(numbers, array_length);
+	printf("Minimum value above is %d \n\n", min_value);
+
+	return 0;
 
 }

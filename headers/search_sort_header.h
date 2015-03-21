@@ -13,9 +13,51 @@ function prototype
 int *max(int *, size_t);
 int *min(int *, size_t);
 int *linear_search(int *, int *, size_t);
+int *binary_search(int *, int *, size_t low_index, size_t high_index);
 
 
 /*Definitions*/
+int *binary_search(int *array, int *key, size_t low_index, size_t high_index)
+/*
+Search array for a specific key
+@params -> array, int(key), size_t(low_index), size_t(high_index)
+@return reference(ptr)
+*/
+{
+	int middle, *b_search_ptr, found;
+
+	/*loop till low_index subscript is greater than high_index subscript*/
+	while(low_index <= high_index)
+	{
+		middle = (high_index + low_index) / 2;
+
+		/*key found in the middle element*/
+		if(*key == array[middle])
+		{
+			found = 1;
+			b_search_ptr = &found;
+			return b_search_ptr;
+		}
+
+		/*if key is less than the middle element, set new high_index*/
+		else if(*key < array[middle])
+		{	
+			high_index = middle - 1;
+		}
+
+		/*if key is greater than middle element, set new low_index*/
+		else
+		{
+			low_index = middle + 1;
+		}
+	}
+
+	/*key not found*/
+	found = -1;
+	b_search_ptr = &found;
+	return b_search_ptr;
+}
+
 int *linear_search(int *array, int *key, size_t size)
 /*
 Search for a specific key in the array

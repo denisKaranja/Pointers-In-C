@@ -36,14 +36,13 @@ int main()
 	printf("LINEAR SEARCH\n");
 	int key = 11, search;
 	search = *linear_search(numbers, &key, array_length);
-	if(search != -1)
-	{
-		printf("\t%d Found.\n", key);
-	}
-	else
-	{
-		printf("\t%d Not found!\n", key);
-	}
+	search != -1 ? printf("\t%d Found.\n", key): printf("\t%d Not found!\n", key);
+
+	/*Binary search*/
+	printf("BINARY SEARCH\n");
+	key = 22;
+	search = *binary_search(numbers, &key, 0, array_length - 1);
+	search != -1 ? printf("\t%d Found.\n", key): printf("\t%d Not found!\n", key);
 
 	return 0;
 

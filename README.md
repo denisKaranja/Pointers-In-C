@@ -6,13 +6,14 @@ Implementation of **Pointers** in C using various problems. Pass and return by r
   * Contains function definitions for the algorithms below.
 
 - [Math_numbers algorithms](https://github.com/denisKaranja/c-pointers/tree/master/math_numbers)
-  * [Square problem(Both reference and by value)](http://en.wikipedia.org/wiki/Square_number)
-  * [Fibonacci sequence](http://en.wikipedia.org/wiki/Fibonacci_number)
-  * [Factorial](http://en.wikipedia.org/wiki/Factorial)
-  * [Next Prime](http://en.wikipedia.org/wiki/Prime)
+  * [Square problem(Both reference and by value)](http://bit.ly/MathHeader)
+  * [Fibonacci sequence](http://bit.ly/MathHeader)
+  * [Factorial](http://bit.ly/MathHeader)
+  * [Next Prime](http://bit.ly/MathHeader)
 
 - [Search_sort algorithms](https://github.com/denisKaranja/c-pointers/tree/master/search_sort)
-  * Minimum value in array
-  * Maximum value in array
-  * [Binary Search| iterative| recursive](http://en.wikipedia.org/wiki/Binary_search_algorithm)
-  * [Linear Search](http://en.wikipedia.org/wiki/Linear_search)
+  * [Minimum value in array](http://bit.ly/SearchSortAlgos)
+  * [Maximum value in array](http://bit.ly/SearchSortAlgos)
+  * [Binary Search| iterative| recursive](http://bit.ly/SearchSortAlgos)
+  * [Linear Search](http://bit.ly/SearchSortAlgos)
+  * [Bubble Sort](http://bit.ly/SearchSortAlgos)

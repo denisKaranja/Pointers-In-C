@@ -4,14 +4,43 @@ Search_sort algorithms
 @__date 21st March, 2015 00:36:22
 */
 
+typedef int bool;
+enum {false, true};
+
 /*
 function prototype
 */
 int *max(int *, size_t);
 int *min(int *, size_t);
+int *linear_search(int *, int *, size_t);
 
 
 /*Definitions*/
+int *linear_search(int *array, int *key, size_t size)
+/*
+Search for a specific key in the array
+@params -> array, int, size_t
+@return int/boolean
+*/
+{
+	int i, *l_search_ptr, found;
+
+	for(i = 0; i < size; i++)
+	{
+		if(array[i] == *key)
+		{
+			found = 1;
+			l_search_ptr = &found;
+			return l_search_ptr;
+		}
+	}
+
+	found = -1;
+	l_search_ptr = &found;
+	return l_search_ptr;
+}
+
+
 int *min(int *array, size_t size)
 /*
 Get minimum value in an array of numbers(ints)

@@ -9,18 +9,13 @@ Search and sort algorithms
 int main()
 {
 	int numbers[] = {20, 10, 15, -2, 5, 22, 39, 65, -3, 34};
-	int sorted_nums[] = {-3, -2, 5, 10, 15, 20, 22, 34, 39, 65};
 	int i;
 	int array_length;
 
 	array_length = sizeof(numbers) / sizeof(numbers[0]);
 	printf("\n");
 
-	for(i = 0; i < array_length; i++)
-	{
-		printf("%d, ", numbers[i]);
-	}
-	printf("\n");
+	print_array(numbers, array_length);
 
 	/*maximum value in an array*/
 	printf("MAX/MIN VALUES\n");
@@ -40,17 +35,26 @@ int main()
 	search == 1 ? printf("\t%d Found.\n", key): printf("\t%d Not found!\n", key);
 
 	/*Binary search iterative*/
+	int *sorted_nums;
 	printf("BINARY SEARCH(iterative)\n");
 	key = -2;
+	sorted_nums = bubble_sort(numbers, array_length);
 	search = *binary_search(sorted_nums, &key, 0, array_length);
 	search != -1 ? printf("\t%d Found.\n", key): printf("\t%d Not found!\n", key);
 
 	/*Binary search recursive*/
 	printf("BINARY SEARCH(recursive)\n");
 	key = 5;
+	sorted_nums = bubble_sort(numbers, array_length);
 	search = *b_search_recursive(sorted_nums, &key, 0, array_length);
 	search != -1 ? printf("\t%d Found.\n", key): printf("\t%d Not found!\n", key);
 
+	printf("\n");
+
+	/*Bubble sort*/
+	printf("Bubble sorted array\n");
+	sorted_nums = bubble_sort(numbers, array_length);
+	print_array(sorted_nums, array_length);
 	printf("\n");
 
 	return 0;

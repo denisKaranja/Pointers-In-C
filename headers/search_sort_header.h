@@ -10,14 +10,64 @@ enum {false, true};
 /*
 function prototype
 */
+void print_array(int *, int);
+
 int *max(int *, size_t);
 int *min(int *, size_t);
-int *linear_search(int *array, int *key, size_t);
-int *binary_search(int *array, int *key, int low_index, int high_index);
-int *b_search_recursive(int *array, int *key, int low_index, int high_index);
+int *linear_search(int *, int *, size_t);
+int *binary_search(int *, int *, int, int);
+int *b_search_recursive(int *, int *, int , int);
+int *bubble_sort(int *, int);
+
 
 
 /*Definitions*/
+
+void print_array(int *array, int size)
+/*
+Prints out an array
+@params -> ptr to array, int
+*/
+{
+	int i;
+	for(i = 0; i < size; i++)
+	{
+		printf("%d ", array[i]);
+	}
+	printf("\n");
+}
+
+
+int *bubble_sort(int *array, int size)
+/*
+sort an array
+@params -> array, int
+@return reference(ptr)
+*/
+{
+	int temp, min_value = array[0], i, j;
+
+	
+	for(j = 1; j < size; j++)
+	{
+		for(i = 0; i < size - 1; i++)
+		{	
+			/*ascending order (>). descending order (<)*/
+			if(array[i] > array[i + 1])
+			{
+				temp = array[i];
+
+				/*swap*/
+				array[i] = array[i + 1];
+				array[i + 1] = temp;
+			}
+		}
+	}
+
+	return array;
+}
+
+
 int *b_search_recursive(int *array, int *key, int low_index, int high_index)
 /*
 Search array for a specific key(Recursively)
@@ -43,7 +93,7 @@ Search array for a specific key(Recursively)
 	}
 
 
-	
+
 	middle = (low_index + high_index) / 2;
 
 	if(*key == array[middle])

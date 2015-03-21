@@ -12,12 +12,62 @@ function prototype
 */
 int *max(int *, size_t);
 int *min(int *, size_t);
-int *linear_search(int *, int *, size_t);
-int *binary_search(int *, int *, size_t low_index, size_t high_index);
+int *linear_search(int *array, int *key, size_t);
+int *binary_search(int *array, int *key, int low_index, int high_index);
+int *b_search_recursive(int *array, int *key, int low_index, int high_index);
 
 
 /*Definitions*/
-int *binary_search(int *array, int *key, size_t low_index, size_t high_index)
+int *b_search_recursive(int *array, int *key, int low_index, int high_index)
+/*
+Search array for a specific key(Recursively)
+@params -> array, int(key), size_t(low_index), size_t(high_index)
+@return reference(ptr)
+*/
+{
+	int middle, found, *bs_recursive_ptr;
+
+	if(array[low_index] == *key)
+	{
+		found = 1;
+		bs_recursive_ptr = &found;
+		return bs_recursive_ptr;
+	}
+
+	else if(low_index >= high_index)
+	{
+		/*key not found..Base case*/
+		found = -1;
+		bs_recursive_ptr = &found;
+		return bs_recursive_ptr;
+	}
+
+
+	
+	middle = (low_index + high_index) / 2;
+
+	if(*key == array[middle])
+	{
+		found = 1;
+		bs_recursive_ptr = &found;
+		return bs_recursive_ptr;
+	}
+	else if(*key < array[middle])
+	{
+		high_index = middle - 1;
+		b_search_recursive(array, key, low_index, high_index);
+	}
+	else
+	{
+		low_index = middle + 1;
+		b_search_recursive(array, key, low_index, high_index);
+	}
+	
+	
+}
+
+
+int *binary_search(int *array, int *key, int low_index, int high_index)
 /*
 Search array for a specific key
 @params -> array, int(key), size_t(low_index), size_t(high_index)

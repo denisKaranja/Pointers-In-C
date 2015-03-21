@@ -8,7 +8,8 @@ Search and sort algorithms
 
 int main()
 {
-	int numbers[] = {20, 10, 15, -2, 5, 22, 34, 65, -3, 34};
+	int numbers[] = {20, 10, 15, -2, 5, 22, 39, 65, -3, 34};
+	int sorted_nums[] = {-3, -2, 5, 10, 15, 20, 22, 34, 39, 65};
 	int i;
 	int array_length;
 
@@ -36,13 +37,21 @@ int main()
 	printf("LINEAR SEARCH\n");
 	int key = 11, search;
 	search = *linear_search(numbers, &key, array_length);
+	search == 1 ? printf("\t%d Found.\n", key): printf("\t%d Not found!\n", key);
+
+	/*Binary search iterative*/
+	printf("BINARY SEARCH(iterative)\n");
+	key = -2;
+	search = *binary_search(sorted_nums, &key, 0, array_length);
 	search != -1 ? printf("\t%d Found.\n", key): printf("\t%d Not found!\n", key);
 
-	/*Binary search*/
-	printf("BINARY SEARCH\n");
-	key = 22;
-	search = *binary_search(numbers, &key, 0, array_length - 1);
+	/*Binary search recursive*/
+	printf("BINARY SEARCH(recursive)\n");
+	key = 5;
+	search = *b_search_recursive(sorted_nums, &key, 0, array_length);
 	search != -1 ? printf("\t%d Found.\n", key): printf("\t%d Not found!\n", key);
+
+	printf("\n");
 
 	return 0;
 

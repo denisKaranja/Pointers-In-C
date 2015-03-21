@@ -11,3 +11,5 @@ Implementation of **Pointers** in C using various problems. Pass and return by r
 - [Search_sort algorithms](https://github.com/denisKaranja/c-pointers/tree/master/search_sort)
   * Minimum value in array
   * Maximum value in array
+  * [Binary Search](http://en.wikipedia.org/wiki/Binary_search_algorithm)
+  * [Linear Search](http://en.wikipedia.org/wiki/Linear_search)

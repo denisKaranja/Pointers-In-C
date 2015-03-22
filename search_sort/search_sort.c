@@ -29,9 +29,14 @@ int main()
 	printf("\tMinimum value above is %d \n\n", min_value);
 
 	/*linear search*/
-	printf("LINEAR SEARCH\n");
+	printf("LINEAR SEARCH(iterative)\n");
 	int key = 11, search;
 	search = *linear_search(numbers, &key, array_length);
+	search == 1 ? printf("\t%d Found.\n", key): printf("\t%d Not found!\n", key);
+
+	printf("LINEAR SEARCH(recursive)\n");
+	key = 39;
+	search = *l_search_recursive(numbers, &key, array_length, 0);
 	search == 1 ? printf("\t%d Found.\n", key): printf("\t%d Not found!\n", key);
 
 	/*Binary search iterative*/

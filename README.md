@@ -15,5 +15,5 @@ Implementation of **Pointers** in C using various problems. Pass and return by r
   * [Minimum value in array](http://bit.ly/SearchSortAlgos)
   * [Maximum value in array](http://bit.ly/SearchSortAlgos)
   * [Binary Search| iterative| recursive](http://bit.ly/SearchSortAlgos)
-  * [Linear Search](http://bit.ly/SearchSortAlgos)
+  * [Linear Search| iterative| recursive ](http://bit.ly/SearchSortAlgos)
   * [Bubble Sort](http://bit.ly/SearchSortAlgos)

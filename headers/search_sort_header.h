@@ -47,9 +47,12 @@ search for a key in an array
 
 	}
 
-	found = -1;
-	ptr = &found;
-	return ptr;
+	else
+	{
+		found = -1;
+		ptr = &found;
+		return ptr;
+	}
 	
 }
 

@@ -18,10 +18,41 @@ int *linear_search(int *, int *, size_t);
 int *binary_search(int *, int *, int, int);
 int *b_search_recursive(int *, int *, int , int);
 int *bubble_sort(int *, int);
+int *l_search_recursive(int *, int *, int, int);
 
 
 
 /*Definitions*/
+int *l_search_recursive(int *array, int *key, int size, int index)
+/*
+search for a key in an array
+@params -> ptr(array), ptr(key), int(size)
+@return -> ptr(found/!found)
+*/
+{
+	int found, *ptr;
+	if(index < size)
+	{
+		if(*key == array[index])
+		{
+			found = 1;
+			ptr = &found;
+			return ptr;
+		}
+		else
+		{
+			index++;
+			l_search_recursive(array, key, size, index);
+		}
+
+	}
+
+	found = -1;
+	ptr = &found;
+	return ptr;
+	
+}
+
 
 void print_array(int *array, int size)
 /*

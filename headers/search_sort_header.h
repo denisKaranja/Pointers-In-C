@@ -111,8 +111,10 @@ Search array for a specific key(Recursively)
 {
 	int middle, found, *bs_recursive_ptr;
 
+	/*Base case*/
 	if(array[low_index] == *key)
 	{
+		/*key foudn*/
 		found = 1;
 		bs_recursive_ptr = &found;
 		return bs_recursive_ptr;
@@ -120,7 +122,7 @@ Search array for a specific key(Recursively)
 
 	else if(low_index >= high_index)
 	{
-		/*key not found..Base case*/
+		/*key not found..*/
 		found = -1;
 		bs_recursive_ptr = &found;
 		return bs_recursive_ptr;

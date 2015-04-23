@@ -1,6 +1,7 @@
 /*
 The factorial 0=>1,1=>1,2=>2,3=>6,4=>24,5=>120
 @__author Denis Karanja
+Computer Science, University of Nairobi
 @__date 20th March, 2015 17:56:32
 */
 #include <stdio.h>
